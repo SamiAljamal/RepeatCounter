@@ -10,6 +10,9 @@ namespace RepeatCounter
   {
     public HomeModule()
     {
+      Get["/"] =_=> {
+        return View["form.cshtml"];
+      };
     }
   }
 }
