@@ -1,10 +1,10 @@
 using Nancy;
 using System.Collections.Generic;
 using System;
-using RepeatCounter.Objects;
+using RepeatCount.Objects;
 
 
-namespace RepeatCounter
+namespace RepeatCount
 {
   public class HomeModule : NancyModule
   {
@@ -12,6 +12,14 @@ namespace RepeatCounter
     {
       Get["/"] =_=> {
         return View["form.cshtml"];
+      };
+      Post["/wordsearch/created"]=_=>{
+        string wordsearch = Request.Form["word"];
+        string phrase = Request.Form["phrase"];
+        RepeatCounter newCount = new RepeatCounter();
+        int CountResult = newCount.CountRepeats(wordsearch,phrase);
+        return View["results.cshtml", CountResult];
+
       };
     }
   }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 
-namespace RepeatCounter.Objects
+namespace RepeatCount.Objects
 {
   public class RepeatCounter
   {
