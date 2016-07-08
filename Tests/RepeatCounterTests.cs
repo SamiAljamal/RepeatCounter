@@ -17,5 +17,18 @@ namespace RepeatCounter.Objects
       RepeatCounter newCounter = new RepeatCounter();
       Assert.Equal(1, newCounter.CountRepeats("word","word"));
     }
+
+    [Fact]
+    public void RepeateCounter_Phrase_2()
+    {
+      RepeatCounter newCounter = new RepeatCounter();
+      Assert.Equal(3, newCounter.CountRepeats("word","word for word for word"));
+    }
+    [Fact]
+    public void RepeateCounter_Phrase_5()
+    {
+      RepeatCounter newCounter = new RepeatCounter();
+      Assert.Equal(5, newCounter.CountRepeats("word","word for word for word will always be a word for a word"));
+    }
   }
 }

@@ -1,4 +1,6 @@
 using Xunit;
+using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
@@ -11,9 +13,13 @@ namespace RepeatCounter.Objects
     public int CountRepeats(string word, string phrase)
     {
       int result = 0;
-      if (word == phrase )
+      List<string> splitPhrase = new List<string>(phrase.Split(" ".ToCharArray()));
+      foreach (string occurance in splitPhrase)
       {
-        result =1;
+        if(word == occurance)
+        {
+          result ++;
+        }
       }
       return result;
     }
