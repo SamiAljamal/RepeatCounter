@@ -16,6 +16,15 @@ This Website allows the user to enter a word and then a string of words and the 
 * It will account for case sensitivity.
   * input: "fight". "Fight the power until you can't fight no more. "
   * output: 2.
+* It will account for punctuation.
+  * input: "fight". "Fight! the power until you can't fight no more. "
+  * output: 2.
+* It will account for white space in the first form.
+  * input: " fight". "Fight! the power until you can't fight no more. "
+  * output: 2.
+
+
+
 
 
 ## Installation and how to run page.

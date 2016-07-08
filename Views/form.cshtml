@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Welcome to Word Search!</h2>
+    <h3>Dircetions</h3>
+    <ul>
+      <li>Input a word in the search box</li>
+      <li>Input a sentence or block of text in the phrasebox</li>
+      <li>Click the submit button to see how many times the search word appears in the sentence.</li>
+    </ul>
+
+    <form action="/wordsearch/created" method="post">
+      <div class = "form-group">
+        <label for="name">Searchbox:</label>
+        <input class = "form-control"  id="word" name="word" type="text" required="true" title="Please fill in the form">
+      </div>
+      <div id="test-word-div" class = "form-group">
+        <label for="testWord">Phrasebox:</label>
+        <input class = "form-control test-word"  id="pharase" name="phrase" type="text" required="true" title="Please fill in the form">
+      </div>
+      <button type="button"  class="btn btn-default center-block add-testword">Add Another Test Word</button>
+      <button type="submit"  class="btn btn-default center-block" >Submit</button>
+      <input class = "form-control"  id="number-of-testWords" name= "number-of-testWords"  type="number" required="true" value=1>
+    </form>
+  </body>
+</html>

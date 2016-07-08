@@ -30,5 +30,18 @@ namespace RepeatCounter.Objects
       RepeatCounter newCounter = new RepeatCounter();
       Assert.Equal(5, newCounter.CountRepeats("word","word for word for word will always be a word for a word"));
     }
+    [Fact]
+    public void RepeateCounter_Phrasecontainspunctuation_5()
+    {
+      RepeatCounter newCounter = new RepeatCounter();
+      Assert.Equal(5, newCounter.CountRepeats("word","word! for word! for word? will always be a word for a word."));
+    }
+
+    [Fact]
+    public void RepeateCounter_SearchWordContainsWhiteSpace_5()
+    {
+      RepeatCounter newCounter = new RepeatCounter();
+      Assert.Equal(5, newCounter.CountRepeats(" woRd ","Word! for word! for word? will always be a word for a word."));
+    }
   }
 }
